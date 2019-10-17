@@ -1,0 +1,13 @@
+jobmanager.rpc.address: jobmanager
+jobmanager.rpc.port: 6123
+jobmanager.heap.size: 4096m
+taskmanager.heap.size: 4096m
+taskmanager.numberOfTaskSlots: 9
+taskmanager.rpc.port: 6122
+taskmanager.data.port: 6121
+taskmanager.exit-on-fatal-akka-error: true
+taskmanager.registration.timeout: 10s
+blob.server.port: 6124
+query.server.port: 6125
+parallelism.default: 4
+web.submit.enable: false

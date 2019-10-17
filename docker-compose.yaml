@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+  jobmanager:
+    build: ./
+    image: flink-docker
+    tty: true
+    stdin_open: true
+    privileged: true
+    environment:
+      - FLINK_DEPLOYMENT_TYPE=jobmanager
+    security_opt:
+      - seccomp:unconfined
+    command: -j flink.sample.App
+
+  taskmanager:
+    build: ./
+    image: flink-docker
+    tty: true
+    stdin_open: true
+    privileged: true
+    environment:
+      - FLINK_DEPLOYMENT_TYPE=taskmanager
+    security_opt:
+      - seccomp:unconfined
+    command: -j flink.sample.App
+
